@@ -1,0 +1,64 @@
+.projects {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center; /* center the description */
+    font-weight: 400; /* remove bold (normal weight) */
+    font-size: 1rem; /* slightly smaller, tweak as needed */
+    color: #555; /* optional for a softer look */
+    margin-bottom: 3rem; /* spacing before the project list */
+}
+
+.project-list {
+    display: grid;
+    gap: 2rem;
+}
+
+/* 1 column on small screens, 2 columns on medium, 3 on large, etc. */
+@media (min-width: 600px) {
+    .project-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .project-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-item {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    overflow: hidden; /* so large images won't overflow */
+    text-align: center;
+}
+
+    .project-item img {
+        width: 100%;
+        display: block;
+    }
+
+.project-description {
+    padding: 1rem;
+}
+
+    .project-description h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    .project-description p {
+        margin: 0;
+        color: #666;
+    }

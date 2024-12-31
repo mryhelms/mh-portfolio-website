@@ -1,0 +1,61 @@
+/* HeroSection.css */
+
+.hero {
+	/* Make it dark, fill vertical space, use Flexbox */
+	position: relative;
+	background-color: #212121; /* or a darker color if you prefer */
+	color: #ffffff;
+	display: flex;
+	align-items: center; /* vertically center items */
+	justify-content: space-around; /* space out text & image */
+	min-height: 80vh; /* take most of the viewport height */
+	padding: 2rem;
+}
+
+/* The left side text container */
+.hero-content {
+	max-width: 600px; /* limit how wide the text section can get */
+}
+
+	/* Make headings stand out on dark bg */
+	.hero-content h1 {
+		font-size: 3rem; /* nice large hero title */
+		margin-bottom: 0.5rem;
+	}
+
+	.hero-content h2 {
+		font-size: 1.25rem;
+		font-weight: 300; /* lighter text for subtitle */
+		margin-top: 0;
+		color: #ccc; /* slightly lighter than white to create contrast */
+	}
+
+/* The image wrapper on the right side */
+.hero-image-wrapper {
+	flex-shrink: 0; /* prevent the image from shrinking */
+	margin-left: 0.1rem; /* create space between text & image */
+}
+
+/* The image itself: smaller circle */
+.hero-photo {
+	width: 250px; /* adjust as desired */
+	height: 250px;
+	object-fit: cover; /* ensure the photo covers the circle */
+	border-radius: 50%; /* circular crop */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.wave-divider {
+	position: absolute;
+	bottom: 0; /* place wave at bottom of hero-header */
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+	.wave-divider svg {
+		display: block;
+		width: 100%; /* ensure the wave spans full width */
+		height: auto; /* adjust height as needed */
+	}
+
