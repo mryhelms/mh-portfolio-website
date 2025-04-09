@@ -1,18 +1,110 @@
+/* src/components/Footer.css */
 .footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.9rem;
-    color: #777;
-    background: #fff;
-    border-top: 1px solid #eee;
+    background-color: var(--dark);
+    color: white;
+    padding: 4rem 0 1.5rem;
 }
 
-    .footer a {
-        color: #000;
-        text-decoration: none;
-        margin: 0 0.25rem;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    color: var(--gray);
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-nav h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+    .footer-nav h3::after,
+    .footer-social h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--primary);
+        border-radius: 2px;
     }
 
-        .footer a:hover {
-            text-decoration: underline;
+.footer-nav ul {
+    list-style: none;
+}
+
+    .footer-nav ul li {
+        margin-bottom: 0.8rem;
+    }
+
+        .footer-nav ul li a,
+        .footer-social a {
+            text-decoration: none;
+            color: var(--gray);
+            transition: all 0.3s ease;
         }
+
+            .footer-nav ul li a:hover,
+            .footer-social a:hover {
+                color: white;
+            }
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+    .social-icons a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+        .social-icons a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
