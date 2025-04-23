@@ -59,7 +59,7 @@ function Contact() {
                                 <i className="far fa-envelope"></i>
                             </div>
                             <h3>Email</h3>
-                            <p>matthew@example.com</p>
+                            <p>mryanhelms@gmail.com</p>
                         </div>
 
                         <div className="contact-card">
@@ -67,7 +67,7 @@ function Contact() {
                                 <i className="fas fa-phone-alt"></i>
                             </div>
                             <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+1 (317) 431-8255</p>
                         </div>
 
                         <div className="contact-card">
@@ -84,9 +84,6 @@ function Contact() {
                             </a>
                             <a href="#" className="social-link">
                                 <i className="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" className="social-link">
-                                <i className="fab fa-twitter"></i>
                             </a>
                             <a href="#" className="social-link">
                                 <i className="fab fa-instagram"></i>

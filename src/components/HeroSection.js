@@ -10,7 +10,7 @@ function HeroSection() {
                 <div className="hero-content">
                     <h1 className="fade-in">Matthew Garcia-Helms</h1>
                     <h2 className="fade-in">Developer | Designer | Writer</h2>
-                    <p className="fade-in">I create beautiful, functional, and user-friendly digital experiences.</p>
+                    <p className="fade-in">I craft beautiful, functional, and user-friendly digital experiences. With a blend of engineering expertise, scientific curiosity, and artistic sensibility, I bring ideas to life in the digital world. I'm also an aspiring writer, always exploring the space where words meet technology.</p>
                     <div className="hero-btns fade-in">
                         <a href="#projects" className="btn btn-primary">View My Work</a>
                         <a href="#contact" className="btn btn-outline">Get In Touch</a>

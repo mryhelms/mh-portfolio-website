@@ -12,17 +12,13 @@ function About() {
                 <div className="about-content">
                     <div className="about-text">
                         <p>
-                            Hello! I'm Matthew, a passionate developer and designer with a love for creating
-                            elegant, user-friendly, and impactful digital solutions.
+                            Hello! I'm Matthew, a passionate developer and designer who loves crafting elegant, user-friendly, and impactful digital experiences.
                         </p>
                         <p>
-                            My journey in tech began over 5 years ago, and since then,
-                            I've worked on projects ranging from responsive websites to
-                            interactive web applications, always focusing on delivering exceptional user experiences.
+                            My journey in tech began over five years ago. Since then, I've worked professionally on integrating complex systems, building robust API integrations, and automating time-consuming manual processes. On the side, I create interactive experiences and websites that help academics and artists share their work with a wider audience.
                         </p>
                         <p>
-                            I specialize in front-end development with expertise in React, JavaScript, and modern CSS,
-                            but I'm also comfortable working with back-end technologies when needed.
+                            I specialize in backend development with the .NET framework in C#, and I build responsive, dynamic frontends using JavaScript and modern frameworks.
                         </p>
 
                         <div className="skills">
