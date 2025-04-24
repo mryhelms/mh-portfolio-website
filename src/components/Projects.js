@@ -10,7 +10,7 @@ function Projects() {
             id: 1,
             title: "ChoanoWorld",
             description: "A fully immersive website to explore the world of choanoflagellates. Discover our closest known unicellular living relative and find out how they can help us learn our evolutionary history.",
-            image: "/path/to/image1.jpg",
+            image: "/Choanoimage.png",
             category: "web",
             tags: ["React", "Node.js", "MongoDB"],
             link: "#"
@@ -19,7 +19,7 @@ function Projects() {
             id: 2,
             title: "Tir Book App",
             description: "An app companion for when you are reading a physical book. Look up words, remember great passages and so much more. A little guide while you get lost in another world.",
-            image: "/path/to/image2.jpg",
+            image: "/Calligramme.png",
             category: "mobile",
             tags: ["React Native", "Firebase"],
             link: "#"
@@ -35,11 +35,11 @@ function Projects() {
         },
         {
             id: 4,
-            title: "Weather Dashboard",
-            description: "A beautiful weather application that provides real-time weather data and forecasts. Features include location search, favorites, and detailed weather metrics.",
-            image: "/path/to/image4.jpg",
-            category: "web",
-            tags: ["JavaScript", "Weather API", "CSS"],
+            title: "Muse Scroll",
+            description: "An application where you can scroll for artistic inspiration. A place to both get insipred and to share your art as well.",
+            image: "/Muse.jpg",
+            category: "mobile",
+            tags: ["React.js", "Node.js", "PostgreSQL"],
             link: "#"
         }
     ];

@@ -10,7 +10,7 @@ function Footer() {
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-logo">
-                        <h2>MG</h2>
+                        <h2>MGH</h2>
                         <p>Developer | Designer | Writer</p>
                     </div>
 

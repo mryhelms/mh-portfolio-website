@@ -27,7 +27,7 @@ function Header() {
         <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
                 <div className="logo">
-                    <a href="#home">MG</a>
+                    <a href="#home">MGH</a>
                 </div>
 
                 <div className={`mobile-menu-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>

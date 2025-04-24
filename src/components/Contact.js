@@ -59,7 +59,7 @@ function Contact() {
                                 <i className="far fa-envelope"></i>
                             </div>
                             <h3>Email</h3>
-                            <p>mryanhelms@gmail.com</p>
+                            <p>soylentcamusservices@gmail.com</p>
                         </div>
 
                         <div className="contact-card">
@@ -75,7 +75,7 @@ function Contact() {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>Location</h3>
-                            <p>San Francisco, CA</p>
+                            <p>Berkeley, CA</p>
                         </div>
 
                         <div className="social-links">
