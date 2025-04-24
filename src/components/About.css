@@ -24,8 +24,33 @@
 
     .skills h3 {
         font-size: 1.3rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         color: var(--dark);
+    }
+
+.skill-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skill-category h4 {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 0.8rem;
+}
+
+    .skill-category h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--primary);
+        border-radius: 3px;
     }
 
 .skill-tags {
@@ -35,8 +60,8 @@
 }
 
 .skill-tag {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--gray-light);
+    color: var(--dark);
     padding: 0.5rem 1rem;
     border-radius: 30px;
     font-size: 0.9rem;
@@ -44,9 +69,19 @@
     transition: all 0.3s ease;
 }
 
+    .skill-tag.primary {
+        background-color: var(--primary);
+        color: white;
+    }
+
+    .skill-tag.secondary {
+        background-color: var(--secondary);
+        color: var(--dark);
+    }
+
     .skill-tag:hover {
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+        box-shadow: 0 5px 15px rgba(44, 94, 76, 0.2);
     }
 
 .about-image {
@@ -114,5 +149,16 @@
     .about-stats {
         flex-direction: column;
         gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .skill-categories {
+        flex-direction: row;
+    }
+
+    .skill-category {
+        flex: 1;
+        min-width: 280px;
     }
 }
