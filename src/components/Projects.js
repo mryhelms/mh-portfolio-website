@@ -28,7 +28,7 @@ function Projects() {
             id: 3,
             title: "Portfolio Website",
             description: "A modern responsive portfolio website built with React and styled with CSS. Features smooth animations and a clean, minimalist design.",
-            image: "/path/to/image3.jpg",
+            image: "/profliepic.JPG",
             category: "web",
             tags: ["React", "CSS", "Framer Motion"],
             link: "#"

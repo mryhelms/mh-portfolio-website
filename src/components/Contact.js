@@ -1,8 +1,9 @@
-//// src/components/Contact.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 function Contact() {
+    const form = useRef();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -25,25 +26,45 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would normally send the data to a server
-        // This is just a simulation
         setFormStatus({
             submitted: true,
             error: false,
-            message: 'Thank you! Your message has been sent successfully.'
+            message: 'Sending your message...'
         });
 
-        // Reset form after submission
-        setFormData({ name: '', email: '', message: '' });
+        // Replace these with your actual EmailJS service IDs from your EmailJS dashboard
+        emailjs.sendForm(
+            'YOUR_SERVICE_ID', // Service ID from EmailJS
+            'YOUR_TEMPLATE_ID', // Template ID from EmailJS
+            form.current,
+            'YOUR_PUBLIC_KEY' // Public Key from EmailJS
+        )
+            .then((result) => {
+                console.log('Email successfully sent!', result.text);
+                setFormStatus({
+                    submitted: true,
+                    error: false,
+                    message: 'Thank you! Your message has been sent successfully.'
+                });
+                // Reset form after submission
+                setFormData({ name: '', email: '', message: '' });
 
-        // Reset status after 5 seconds
-        setTimeout(() => {
-            setFormStatus({
-                submitted: false,
-                error: false,
-                message: ''
+                // Reset status after 5 seconds
+                setTimeout(() => {
+                    setFormStatus({
+                        submitted: false,
+                        error: false,
+                        message: ''
+                    });
+                }, 5000);
+            }, (error) => {
+                console.error('Failed to send email:', error.text);
+                setFormStatus({
+                    submitted: true,
+                    error: true,
+                    message: 'Failed to send message. Please try again later.'
+                });
             });
-        }, 5000);
     };
 
     return (
@@ -59,7 +80,7 @@ function Contact() {
                                 <i className="far fa-envelope"></i>
                             </div>
                             <h3>Email</h3>
-                            <p>soylentcamusservices@gmail.com</p>
+                            <p><a href="mailto:soylentcamusservices@gmail.com">soylentcamusservices@gmail.com</a></p>
                         </div>
 
                         <div className="contact-card">
@@ -67,7 +88,7 @@ function Contact() {
                                 <i className="fas fa-phone-alt"></i>
                             </div>
                             <h3>Phone</h3>
-                            <p>+1 (317) 431-8255</p>
+                            <p><a href="tel:+13174318255">+1 (317) 431-8255</a></p>
                         </div>
 
                         <div className="contact-card">
@@ -75,7 +96,7 @@ function Contact() {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>Location</h3>
-                            <p>Berkeley, CA</p>
+                            <p><a href="https://maps.google.com/?q=Berkeley,CA" target="_blank" rel="noopener noreferrer">Berkeley, CA</a></p>
                         </div>
 
                         <div className="social-links">
@@ -85,14 +106,14 @@ function Contact() {
                             <a href="#" className="social-link">
                                 <i className="fab fa-linkedin"></i>
                             </a>
-                            <a href="#" className="social-link">
+                            <a href="https://www.getclearspace.com/" className="social-link">
                                 <i className="fab fa-instagram"></i>
                             </a>
                         </div>
                     </div>
 
                     <div className="contact-form-container">
-                        <form className="contact-form" onSubmit={handleSubmit}>
+                        <form className="contact-form" ref={form} onSubmit={handleSubmit}>
                             {formStatus.message && (
                                 <div className={`form-message ${formStatus.error ? 'error' : 'success'}`}>
                                     {formStatus.message}
@@ -135,7 +156,9 @@ function Contact() {
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="btn btn-primary">Send Message</button>
+                            <button type="submit" className="btn btn-primary">
+                                {formStatus.submitted && !formStatus.error ? 'Sending...' : 'Send Message'}
+                            </button>
                         </form>
                     </div>
                 </div>
